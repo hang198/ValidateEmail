@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="email" type="text"><button onclick="checkEmail()";>CheckEmail</button>
+<span id="result"></span>
+<script>
+    function checkEmail() {
+        let ex = /^[A-Za-z0-9]+[@[A-Za-z0-9]+(\.[A-Za-z0-9]+)(?:\.[A-Za-z0-9]+)?$/;
+        let address = document.getElementById('email').value;
+        let result = ex.test(address);
+        if (result) document.getElementById('result').innerHTML = 'The e-mail address is valid';
+        else document.getElementById('result').innerHTML = 'The e-mail address is not valid';
+    }
+
+</script>
+</body>
+</html>
